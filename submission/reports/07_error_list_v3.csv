@@ -1,0 +1,32 @@
+check,severity,code,image,line,message,extra
+missing_labels,warn,EMPTY_LABEL,img_0013,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0097,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0129,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0147,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0184,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0192,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+label_format,warn,BOX_HUGE,img_0018,1,diện tích box 0.970485 > 0.95,
+label_format,warn,BOX_TINY,img_0026,6,cạnh ngắn của box 11.4079px < 12px,
+label_format,warn,BOX_TINY,img_0051,5,cạnh ngắn của box 8.90592px < 12px,
+label_format,warn,BOX_HUGE,img_0128,1,diện tích box 0.988382 > 0.95,
+label_format,warn,BOX_TINY,img_0161,2,cạnh ngắn của box 10.259px < 12px,
+label_format,warn,BOX_TINY,img_0161,3,cạnh ngắn của box 11.3952px < 12px,
+label_format,warn,BOX_TINY,img_0161,4,cạnh ngắn của box 11.8661px < 12px,
+label_format,warn,BOX_TINY,img_0183,11,cạnh ngắn của box 11.7798px < 12px,
+label_format,warn,BOX_HUGE,img_0196,1,diện tích box 0.984226 > 0.95,
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0014,2,box nhãn không khớp dự đoán nào (IoU lớn nhất 0.145),"{""iou"": 0.1450117456567434}"
+second_opinion,warn,POSSIBLE_LOOSE_BOX,img_0021,,box cùng lớp 1 lệch/lỏng (IoU 0.486),"{""conf"": 0.8362, ""iou"": 0.4859935892263159}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0022,2,box nhãn không khớp dự đoán nào (IoU lớn nhất 0.000),"{""iou"": 0.0}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0068,8,box nhãn không khớp dự đoán nào (IoU lớn nhất 0.199),"{""iou"": 0.19889536171485311}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0075,6,box nhãn không khớp dự đoán nào (IoU lớn nhất 0.107),"{""iou"": 0.10672083058763539}"
+second_opinion,warn,POSSIBLE_WRONG_CLASS,img_0078,,"model dự đoán lớp 0, box nhãn gần nhất khác lớp (IoU 0.919)","{""conf"": 0.8287, ""iou"": 0.9189310218686991}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0091,10,box nhãn không khớp dự đoán nào (IoU lớn nhất 0.124),"{""iou"": 0.12359206869958318}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0124,8,box nhãn không khớp dự đoán nào (IoU lớn nhất 0.036),"{""iou"": 0.03620175556397309}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0131,11,box nhãn không khớp dự đoán nào (IoU lớn nhất 0.000),"{""iou"": 0.0}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0177,2,box nhãn không khớp dự đoán nào (IoU lớn nhất 0.000),"{""iou"": 0.0}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0180,5,box nhãn không khớp dự đoán nào (IoU lớn nhất 0.000),"{""iou"": 0.0}"
+second_opinion,warn,POSSIBLE_MISSING,img_0183,,model thấy lớp 1 (conf 0.810) nhưng không có box nhãn khớp,"{""conf"": 0.8104, ""iou"": 0.0}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0189,4,box nhãn không khớp dự đoán nào (IoU lớn nhất 0.009),"{""iou"": 0.00916243131024922}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0191,1,box nhãn không khớp dự đoán nào (IoU lớn nhất 0.256),"{""iou"": 0.25644187130435536}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0206,1,box nhãn không khớp dự đoán nào (IoU lớn nhất 0.108),"{""iou"": 0.10827808564215993}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0212,4,box nhãn không khớp dự đoán nào (IoU lớn nhất 0.150),"{""iou"": 0.15014265209152355}"

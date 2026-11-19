@@ -9,6 +9,7 @@ import json
 import re
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -40,7 +41,12 @@ if not re.match(r"# Day 09 Lab — .+: \S+ - .+", first):
     errs.append("dòng tiêu đề (dòng `# ...` đầu tiên) của README.md phải là: '# Day 09 Lab — <Họ và tên>: <MSHV> - <Họ và tên>' (xem SUBMISSION.md)")
 
 # 2. unit test
-r = subprocess.run([sys.executable, "-m", "pytest", "-q", "--tb=no", "-p", "no:cacheprovider"], cwd=ROOT, capture_output=True, text=True)
+with tempfile.TemporaryDirectory(prefix="day09-pytest-") as tmp:
+    r = subprocess.run(
+        [sys.executable, "-m", "pytest", "-q", "--tb=no", "-p", "no:cacheprovider",
+         "--basetemp", str(Path(tmp) / "basetemp")],
+        cwd=ROOT, capture_output=True, text=True,
+    )
 last = [l for l in r.stdout.splitlines() if l.strip()][-1:] or ["(không có kết quả)"]
 print("pytest:", last[0])
 if r.returncode != 0:
@@ -71,7 +77,7 @@ if pin.exists():
 else:
     warns.append("thiếu scripts/_protected.json: không kiểm được file đề/cấu hình cố định")
 prot = set(json.loads(pin.read_text(encoding="utf-8"))) if pin.exists() else set()
-for f in [p for p in (ROOT / "pipeline").rglob("*.py") if str(p.relative_to(ROOT)) not in prot]:
+for f in [p for p in (ROOT / "pipeline").rglob("*.py") if p.relative_to(ROOT).as_posix() not in prot]:
     t = f.read_text(encoding="utf-8")
     for bad in ("review_reference", "MANIFEST", "answer_key", "data/test", "data/calib", "gold_val"):
         if bad in t and not (f.name == "duplicates.py" and bad in ("data/test", "gold_val")):
